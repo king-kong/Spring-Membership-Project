@@ -8,7 +8,6 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
 		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.0.xsd">
 
-
 	<!-- In memory authentication -->
 	<security:user-service id="userService">
 		<security:user name="test" password="test" authorities="ROLE_ADMIN" />
@@ -43,7 +42,5 @@
 	</beans:bean>
 
 	<context:component-scan base-package="com.example.authorizationTest" />
-
-
 
 </beans:beans>
