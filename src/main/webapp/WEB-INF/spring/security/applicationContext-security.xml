@@ -10,7 +10,6 @@
 
 	<http auto-config='true'>
 		<form-login />
-		<http-basic />
 		<logout logout-url="/static/j_spring_security_logout" />
 		<intercept-url pattern="/**" access="ROLE_USER" />
 	</http>
