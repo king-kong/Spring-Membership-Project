@@ -6,22 +6,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
-		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.0.xsd">
-
-	<!-- In memory authentication -->
-	<security:user-service id="userService">
-		<security:user name="test" password="test" authorities="ROLE_ADMIN" />
-		<security:user name="user" password="user" authorities="ROLE_USER" />
-	</security:user-service>
-
-	<!-- Configure the authentication manager to use authentication service -->
-	<security:authentication-manager>
-		<security:authentication-provider
-			user-service-ref="userService" />
-	</security:authentication-manager>
-
-	<security:global-method-security
-		jsr250-annotations="enabled" />
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
 
 	<!-- DispatcherServlet Context: defines this servlet's request-processing 
 		infrastructure -->

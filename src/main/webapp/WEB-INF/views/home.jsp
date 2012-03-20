@@ -1,4 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jstl/core"  prefix="c" %>
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
+
 <%@ page session="false" %>
 <html>
 <head>
@@ -6,14 +8,13 @@
 </head>
 <body>
 <h1>
-	Hello world!  
+	Hello <security:authentication property="principal.username" />!  
 </h1>
 
 <P> The time on the server is ${serverTime}. </P>
 <p> Your country is ${country.country_name} </p>
 
-<p><a href="/AuthorizationTest/login">Login</a></p>
-
+<a href="/AuthorizationTest/static/j_spring_security_logout">logout</a>
 
 </body>
 </html>
