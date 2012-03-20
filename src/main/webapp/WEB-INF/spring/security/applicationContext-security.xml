@@ -8,7 +8,7 @@
 	<global-method-security secured-annotations="enabled">
 	</global-method-security>
 
-	<http auto-config='true'>
+	<http auto-config='true'> 
 		<form-login />
 		<logout logout-url="/static/j_spring_security_logout" />
 		<intercept-url pattern="/**" access="ROLE_USER" />
